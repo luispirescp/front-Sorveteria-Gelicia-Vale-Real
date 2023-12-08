@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom"
 // Icons Imports
 
 import { BsBarChartLine } from "react-icons/bs";
-import { MdProductionQuantityLimits } from "react-icons/md";
+import { MdProductionQuantityLimits,MdQueryBuilder } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FiLogOut } from "react-icons/fi";
 
@@ -29,6 +29,10 @@ export function Aside() {
     navigate("/products");
   }
 
+  function handleNavigateStock() {
+    navigate("/stock");
+  }
+
   function handleNavigateConfig() {
     navigate("/config");
   }
@@ -38,12 +42,12 @@ export function Aside() {
       <div className="info">
         <a href="/">
           <img src={logo} />
-          Sorveteria
+          Lancheria
         </a>
 
         <div>
-          <img src="https://github.com/KevinSilvaa.png" />
-          <h2>Kevin Silvaa</h2>
+          <img src="" />
+          <h2></h2>
         </div>
       </div>
 
@@ -60,6 +64,13 @@ export function Aside() {
             <button onClick={handleNavigateProducts}>
               <MdProductionQuantityLimits />
               Produtos
+            </button>
+          </li>
+
+          <li>
+            <button onClick={handleNavigateStock}>
+              <MdQueryBuilder />
+              Estoque
             </button>
           </li>
 
