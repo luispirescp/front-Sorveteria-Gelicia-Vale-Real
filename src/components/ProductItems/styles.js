@@ -46,7 +46,12 @@ export const Container = styled.div`
           border-radius: 4px;
           margin-right: 8px;
         }
-        
+        .productName {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; /* Isso irá adicionar reticências (...) caso o texto ultrapasse o contêiner */
+          /* Outros estilos, se necessário */
+        }
         .button-search {
           /* Adicione os estilos desejados para o botão */
           padding: 8px 16px;

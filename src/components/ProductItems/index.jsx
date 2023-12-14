@@ -24,7 +24,7 @@ export function ProductItems({ searchValue }) {
   };
   useEffect(() => {
     async function fetchProducts() {
-      try {
+      try {        
         const response = await getAllProduct();
         setProducts(response.data);
       } catch (error) {
@@ -41,8 +41,7 @@ export function ProductItems({ searchValue }) {
       
       const inputValue = document.querySelector('input').value;
 
-  if (inputValue.trim() === "") {
-  console.log ("clicousel ")
+  if (inputValue.trim() === "") {  
   }
       const results = await searchProductByName(search);      
       setProducts(results);
