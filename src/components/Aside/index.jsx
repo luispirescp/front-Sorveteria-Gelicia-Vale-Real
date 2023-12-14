@@ -48,7 +48,6 @@ export function Aside() {
           <img src={logo} />
           Lancheria
         </a>
-
         <div>
           <img src="" />
           <h2></h2>
