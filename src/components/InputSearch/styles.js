@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
+  width: 30%;
   padding: 0.75rem 0.875rem;
   background: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_300};
   display: flex;

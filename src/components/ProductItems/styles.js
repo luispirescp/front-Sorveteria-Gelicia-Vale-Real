@@ -39,7 +39,24 @@ export const Container = styled.div`
           display: flex;
           flex-direction: column;
         }
-  
+        .input-search {
+          /* Adicione os estilos desejados para o input */
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          margin-right: 8px;
+        }
+        
+        .button-search {
+          /* Adicione os estilos desejados para o botão */
+          padding: 8px 16px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
         button {
           background: transparent;
           border: none;

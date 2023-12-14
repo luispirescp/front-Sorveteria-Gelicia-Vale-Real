@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom"
 // Icons Imports
 
 import { BsBarChartLine } from "react-icons/bs";
-import { MdProductionQuantityLimits,MdQueryBuilder } from "react-icons/md";
+import { MdProductionQuantityLimits,MdQueryBuilder,MdRestoreFromTrash } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FiLogOut } from "react-icons/fi";
 
@@ -31,6 +31,10 @@ export function Aside() {
 
   function handleNavigateStock() {
     navigate("/stock");
+  }
+
+  function handleNavigateCriateProducts() {
+    navigate("/criate");
   }
 
   function handleNavigateConfig() {
@@ -66,7 +70,12 @@ export function Aside() {
               Produtos
             </button>
           </li>
-
+          <li>
+            <button onClick={handleNavigateCriateProducts}>
+              <MdRestoreFromTrash />
+              Criar Prod
+            </button>
+          </li>
           <li>
             <button onClick={handleNavigateStock}>
               <MdQueryBuilder />

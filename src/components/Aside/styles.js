@@ -29,7 +29,7 @@ export const Container = styled.aside`
 
       img {
         width: 64px;
-        height: 64px;
+        height: 24px;
         border-radius: 50%;
       }
     }
@@ -42,7 +42,7 @@ export const Container = styled.aside`
       
       img {
         width: 96px;
-        height: 96px;
+        height: 56px;
         border-radius: 50%;
       }
 

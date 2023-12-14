@@ -1,19 +1,20 @@
-import axios from "axios";
+import axios from 'axios';
 
-const env = "https://sorveteria-deploy-render.onrender.com";
-// const env = "http://localhost:8080";
+const env = "http://localhost:8080";
 
-// Configuração da API principal
-export const api = axios.create({
-  baseURL: env //"https://sorveteria-deploy-render.onrender.com"
-});
+const createProduct = (dataCreateProduct) => {
+  return axios.post(`${env}/create-produto`, dataCreateProduct);
+};
 
-// Função para buscar um produto por ID
-export const getProductById = (id) => {
+const getProductById = (id) => {
   return axios.get(`${env}/${id}`);
 };
 
-export const updateProduct = async (id, updatedProductData) => {
+const getAllProduct = () => {
+  return axios.get(`${env}/todos-produtos`);
+};
+
+const updateProduct = async (id, updatedProductData) => {
   try {
     const response = await axios.put(`${env}/${id}`, updatedProductData);
     return response.data;
@@ -22,11 +23,22 @@ export const updateProduct = async (id, updatedProductData) => {
   }
 };
 
-export const searchProductByName = async (name) => {
+const searchProductByName = async (name) => {
   try {
-    const response = await axios.get(`${env}/${name}`);
+    const response = await axios.get(`${env}/product/${name}`);
     return response.data;
   } catch (error) {
+    console.log(error);
     throw new Error('Erro ao buscar o produto');
   }
+};
+
+
+
+export {
+  createProduct,
+  getProductById,
+  searchProductByName,
+  updateProduct,
+  getAllProduct
 };
