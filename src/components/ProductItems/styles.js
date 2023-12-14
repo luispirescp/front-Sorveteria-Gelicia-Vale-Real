@@ -10,7 +10,7 @@ export const Container = styled.div`
     gap: 2rem;
 
     img {
-      width: 76px;
+      width: 66px;
       height: 80%;
       border-radius: 0.5rem;
       background-position: center;
@@ -23,7 +23,7 @@ export const Container = styled.div`
       justify-content: space-between;
       width: 100%;
       max-width: 300px;
-      height: 240px;
+      height: 260px;
       padding: 1rem;
       background: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_300};
       color: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_100};
@@ -46,6 +46,17 @@ export const Container = styled.div`
           border-radius: 4px;
           margin-right: 8px;
         }
+        .checkbox-label{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding:3px;
+          width: 100%;
+          height:15%;
+          background-color: #B0E0E6;
+          margin-sta: 58px;
+        }
+
         .productName {
           white-space: nowrap;
           overflow: hidden;
@@ -65,8 +76,11 @@ export const Container = styled.div`
         button {
           background: transparent;
           border: none;
+          width: 100%;
+          height:20%;
+          margin-top:10%;
           border-radius: 0.5rem;
-          padding: 0.6rem;
+          padding: 0.4rem;
           background: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_200};
           color: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_100};
           font-size: 0.875rem;
@@ -93,7 +107,7 @@ export const Container = styled.div`
   @media screen and (min-width: 850px) {
     
     .cards .card {
-      max-width: 280px;
+      max-width: 340px;
     }
   }
 

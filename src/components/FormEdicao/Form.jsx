@@ -11,6 +11,7 @@ import {
   InputField,
   TextAreaField,
   SubmitButton,
+  FieldImg,
   StyledLink
 } from './styles';
 
@@ -87,7 +88,7 @@ const EditProduct = () => {
 
             <FormGroup>
               <label htmlFor="image">Imagem (URL):</label>
-              <Field
+              <FieldImg
                 type="text"
                 id="image"
                 name="image"

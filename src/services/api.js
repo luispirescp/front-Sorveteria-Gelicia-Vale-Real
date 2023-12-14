@@ -1,9 +1,13 @@
 import axios from 'axios';
 
-const env = "https://sorveteria-deploy-render.onrender.com";
+const env = "http://localhost:8080";
 
 const createProduct = (dataCreateProduct) => {
   return axios.post(`${env}/create-produto`, dataCreateProduct);
+};
+
+const buyProductsByIds = (selectedProducts) => {
+  return axios.post(`${env}/reduces-stock`, selectedProducts);
 };
 
 const getProductById = (id) => {
@@ -40,5 +44,6 @@ export {
   getProductById,
   searchProductByName,
   updateProduct,
-  getAllProduct
+  getAllProduct,
+  buyProductsByIds
 };

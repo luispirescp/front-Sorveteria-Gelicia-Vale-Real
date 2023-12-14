@@ -3,8 +3,9 @@ import styled from 'styled-components';
 
 export const FormContainer = styled.div`
  
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
+  margin-top:60px;
   padding: 10px;  
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -15,7 +16,8 @@ export const FormContainer = styled.div`
   }
 
   .imagem img {
-    max-width: 100px; /* Largura máxima da imagem */
+    max-width: 100px; 
+    padding:10px;
   }
 
   `;
@@ -49,6 +51,15 @@ export const CustomInputField = styled.input`
 export const InputField = styled.input`
   width: 100%;
   padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 14px;
+`;
+
+export const FieldImg = styled.input`
+  width: 100%;
+  padding: 18px;
+  margin-top:10px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 14px;
