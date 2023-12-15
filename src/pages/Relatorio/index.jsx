@@ -6,7 +6,7 @@ import {
 
 export function Relatorio() {
   const [dados, setDados] = useState([]);
- 
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -46,14 +46,28 @@ export function Relatorio() {
         </tr>
       </thead>
       <tbody>
-        {dados.map((item, index) => (
-          <tr key={index}>
-            {item.map((valor, i) => (
-              <td key={i} style={{ border: '1px solid #363636', padding: '8px', borderBottom: index === dados.length ? 'none' : '1px solid #363636',textAlign:'center' }}>{valor}</td>
-            ))}
-          </tr>
-        ))}        
-      </tbody>
+  {dados.map((item, index) => (
+    <tr key={index}>
+      {item.map((valor, i) => {
+        // Verifica se o valor é numérico
+        const formattedValue = typeof valor === 'number' ? valor.toFixed(2) : valor;
+        return (
+          <td
+            key={i}
+            style={{
+              border: '1px solid #363636',
+              padding: '8px',
+              borderBottom: index === dados.length ? 'none' : '1px solid #363636',
+              textAlign: 'center'
+            }}
+          >
+            {formattedValue}
+          </td>
+        );
+      })}
+    </tr>
+  ))}
+</tbody>
     </table>
     </>
     );
