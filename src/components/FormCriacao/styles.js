@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const FormContainer = styled.div`
-  max-width: 400px;
-  margin: 9px auto;
+  max-width: 600px;
+  margin: 49px auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -54,7 +54,7 @@ export const TextAreaField = styled.textarea`
 
 export const SubmitButton = styled.button`
   padding: 10px 15px;  
-  margin-right: 171px;
+  margin-right: 381px;
   font-size: 16px;
   background-color: #007bff;
   color: #fff;

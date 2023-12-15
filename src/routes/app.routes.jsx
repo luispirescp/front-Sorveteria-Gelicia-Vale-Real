@@ -4,7 +4,7 @@ import { Home } from "../pages/Home";
 import { Products } from "../pages/Products";
 import EditProduct from '../components/FormEdicao/Form';
 import FormCricao from '../components/FormCriacao/Form';
-import { Estock } from "../pages/Estock";
+import { Relatorio } from "../pages/Relatorio";
 import { Config } from "../pages/Config";
 import { Login  } from "../pages/Login";
 
@@ -17,7 +17,7 @@ export function AppRoutes() {
       <Route path="/products" element={<Products />} />
       <Route path="/criate" element={<FormCricao />} /> 
       <Route path="/:id" element={<EditProduct />} /> 
-      <Route path="/stock" element={<Estock />} /> 
+      <Route path="/relatorio" element={<Relatorio />} /> 
       <Route path="/config" element={<Config />} /> 
       <Route path="/login" element={<Login />} />      
     </Routes>

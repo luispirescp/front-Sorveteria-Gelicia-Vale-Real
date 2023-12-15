@@ -30,7 +30,7 @@ export function Aside() {
   }
 
   function handleNavigateStock() {
-    navigate("/stock");
+    navigate("/relatorio");
   }
 
   function handleNavigateCriateProducts() {
@@ -78,7 +78,7 @@ export function Aside() {
           <li>
             <button onClick={handleNavigateStock}>
               <MdQueryBuilder />
-              Estoque
+              Relatorio
             </button>
           </li>
 

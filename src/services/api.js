@@ -1,10 +1,14 @@
 import axios from 'axios';
 
-// const env = "http://localhost:8080";
-const env = 'https://sorveteria-deploy-render.onrender.com'
+const env = "http://localhost:8080";
+// const env = 'https://sorveteria-deploy-render.onrender.com'
 
 const createProduct = (dataCreateProduct) => {
   return axios.post(`${env}/create-produto`, dataCreateProduct);
+};
+
+const getValorTotalVendido = () => {
+  return axios.get(`${env}/valorTotalVendido`); // Substitua pela URL correta do endpoint
 };
 
 const buyProductsByIds = (selectedProducts) => {
@@ -46,5 +50,6 @@ export {
   searchProductByName,
   updateProduct,
   getAllProduct,
-  buyProductsByIds
+  buyProductsByIds,
+  getValorTotalVendido
 };
