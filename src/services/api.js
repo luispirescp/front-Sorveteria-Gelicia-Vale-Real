@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const env = "http://localhost:8080";
-// const env = 'https://sorveteria-deploy-render.onrender.com'
+// const env = "http://localhost:8080";
+const env = 'https://sorveteria-deploy-render.onrender.com'
 
 const createProduct = (dataCreateProduct) => {
   return axios.post(`${env}/create-produto`, dataCreateProduct);
