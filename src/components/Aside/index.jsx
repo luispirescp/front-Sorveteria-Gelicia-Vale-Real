@@ -34,7 +34,7 @@ export function Aside() {
   }
 
   function handleNavigateCriateProducts() {
-    navigate("/criate");
+    navigate("/criate-produto");
   }
 
   function handleNavigateConfig() {

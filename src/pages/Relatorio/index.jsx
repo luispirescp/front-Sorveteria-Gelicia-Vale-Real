@@ -6,7 +6,7 @@ import {
 
 export function Relatorio() {
   const [dados, setDados] = useState([]);
-
+ 
   useEffect(() => {
     const fetchData = async () => {
       try {
