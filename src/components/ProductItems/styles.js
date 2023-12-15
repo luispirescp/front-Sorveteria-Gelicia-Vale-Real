@@ -10,7 +10,7 @@ export const Container = styled.div`
     gap: 2rem;
 
     img {
-      width: 66px;
+      width: 79px;
       height: 80%;
       border-radius: 0.5rem;
       background-position: center;
@@ -21,9 +21,9 @@ export const Container = styled.div`
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
-      width: 100%;
-      max-width: 300px;
-      height: 260px;
+      width: 600px;
+      max-width: 600px;
+      height: 360px;
       padding: 1rem;
       background: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_300};
       color: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_100};
@@ -54,7 +54,7 @@ export const Container = styled.div`
           width: 100%;
           height:15%;
           background-color: #B0E0E6;
-          margin-sta: 58px;
+          margin-start: 58px;
         }
 
         .productName {
@@ -76,7 +76,7 @@ export const Container = styled.div`
         button {
           background: transparent;
           border: none;
-          width: 100%;
+          width: 70%;
           height:20%;
           margin-top:10%;
           border-radius: 0.5rem;
@@ -99,21 +99,28 @@ export const Container = styled.div`
         .price {
           color: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_100};
           font-weight: 500;
+          font-size:25px;
         }
       }
     }
   }
+  return (
+    <Container className="input">
+      {Icon && <FiSearch size={24} />}
+      <input {...rest}>{title}</input>
+    </Container>
+  );
+}
 
-  @media screen and (min-width: 850px) {
-    
+  @media screen and (min-width: 450px) {    
     .cards .card {
-      max-width: 340px;
+      max-width: 540px;
     }
   }
 
   @media screen and (min-width: 1440px) {
     .card {
-      max-width: 320px;
+      max-width: 520px;
     }
   }
 `;

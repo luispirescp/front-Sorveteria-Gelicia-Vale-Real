@@ -34,9 +34,8 @@ export const Content = styled.main`
     display: none;
   }
 
-  @media screen and (min-width: 850px) {
-    padding: 2rem 3rem;
-    
+  @media screen and (min-width: 450px) {
+    padding: 1rem 3rem;    
     .input {
       display: block;
     }

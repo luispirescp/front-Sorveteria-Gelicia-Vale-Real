@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const FormContainer = styled.div`
-  max-width: 600px;
+  width:100%;
   margin: 49px auto;
-  padding: 20px;
+  height:100%;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 `;
@@ -54,7 +55,7 @@ export const TextAreaField = styled.textarea`
 
 export const SubmitButton = styled.button`
   padding: 10px 15px;  
-  margin-right: 381px;
+  margin-right: 181px;
   font-size: 16px;
   background-color: #007bff;
   color: #fff;
@@ -64,4 +65,4 @@ export const SubmitButton = styled.button`
   &:hover {
     background-color: #0056b3;
   }
-`;
+`

@@ -33,7 +33,7 @@ export const Container = styled.aside`
         border-radius: 50%;
       }
     }
-
+    
     div {
       display: flex;
       flex-direction: column;

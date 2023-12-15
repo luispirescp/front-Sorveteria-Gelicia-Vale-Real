@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { getValorTotalVendido } from '../../services/api';
+import {  
+  StyledLink
+} from './styles';
 
 export function Relatorio() {
   const [dados, setDados] = useState([]);
@@ -8,6 +11,11 @@ export function Relatorio() {
     const fetchData = async () => {
       try {
         const response = await getValorTotalVendido();
+        const data = response.data;
+        console.log(data);
+        if(data){
+
+        }
         setDados(response.data); // Define o valor retornado pela requisição no estado
         console.log(response.data); // Exibe os dados recebidos no console
       } catch (error) {
@@ -23,10 +31,13 @@ export function Relatorio() {
     }
     return (
       <>
-      <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '20px' }}>
-      <caption style={{ padding:'30px', fontSize:'40px'}}>Relatorio</caption>
+      <table style={{ width: '80%', marginBottom: '1px', margin:'5px', marginLeft:'1px'}}>      
+      <caption style={{ padding:'10px', fontSize:'40px', marginLeft:'30px'}}>Relatorio 
+      <StyledLink to="/products">Voltar</StyledLink>
+      </caption>
+      
       <thead>
-        <tr >          
+        <tr style={{alignItems:'center'}}>          
           <th style={{ backgroundColor: '#f2f2f2',textAlign:'center', border: '1px solid #000000', padding: '8px' }}>Nome</th>
           <th style={{ backgroundColor: '#f2f2f2', textAlign:'center',border: '1px solid #000000', padding: '8px' }}>Preço</th>
           <th style={{ backgroundColor: '#f2f2f2', textAlign:'center',border: '1px solid #000000', padding: '8px' }}>Quantidade</th>

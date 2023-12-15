@@ -21,14 +21,12 @@ export function Products() {
   return (
     <Container>
       <Header />
-
       <Aside />
       <Content>
         <InputSearch 
           placeholder="Pesquisar produtos"
           onChange={handleSearch}
         />
-
         <ProductItems searchValue={search} />
       </Content>
     </Container>

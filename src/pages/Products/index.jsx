@@ -21,20 +21,6 @@ export function Products() {
     setSearch(e.target.value);
   };
 
-  // Função assíncrona para realizar a pesquisa
-  // const searchProduct = async () => {
-  //   try {
-  //     console.log("clicou ")
-      
-  //     const results = await searchProductByName(search);            
-  //     if (results.length > 0) {
-  //       console.log("TEM ALGO ")
-  //     }
-  //   } catch (error) {
-  //     console.error("Erro ao pesquisar produtos:", error);
-  //   }
-  // };
-
   return (
       <Container>
         <Header />

@@ -12,3 +12,6 @@ export function InputSearch({ icon: Icon, title, ...rest }) {
     </Container>
   );
 }
+
+
+

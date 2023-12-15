@@ -40,11 +40,35 @@ export function Header() {
     }, 500);
   }
 
+  function handleNavigateProducts() {
+    handleOpen();
+
+    setTimeout(() => {
+      navigate("/products");
+    }, 500);
+  }
+  
+
   function handleNavigateConfig() {
     handleOpen();
 
     setTimeout(() => {
       navigate("/config");
+    }, 500);
+  }
+  function handleNavigateCriateProducts() {
+    handleOpen();
+
+    setTimeout(() => {
+      navigate("/criate-produto");
+    }, 500);
+  }
+
+  function handleNavigateStock() {
+    handleOpen();
+
+    setTimeout(() => {
+      navigate("/relatorio");
     }, 500);
   }
 
@@ -70,7 +94,20 @@ export function Header() {
               Produtos
             </button>
           </li>
-
+          <li>
+            <button onClick={handleNavigateCriateProducts}>
+              <IoSettingsOutline />
+              Criar Produto
+            </button>
+          </li>
+          
+          <li>
+            <button onClick={handleNavigateStock}>
+              <IoSettingsOutline />
+              relatorio
+            </button>
+          </li>
+        
           <li>
             <button onClick={handleNavigateConfig}>
               <IoSettingsOutline />
@@ -84,10 +121,7 @@ export function Header() {
           Logout
         </button>
       </nav>
-
-      <InputSearch
-        placeholder="Pesquisar produtos"
-      />
+     
     </Container>
   );
 }

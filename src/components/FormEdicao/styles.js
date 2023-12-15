@@ -77,7 +77,7 @@ export const TextAreaField = styled.textarea`
 export const SubmitButton = styled.button`
   padding: 10px 15px;
   font-size: 16px;
-  margin-right: 681px;
+  margin-right: 181px;
   background-color: #007bff;
   color: #fff;
   border: none;
