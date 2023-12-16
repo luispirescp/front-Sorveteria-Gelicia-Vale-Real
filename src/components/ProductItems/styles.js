@@ -10,7 +10,7 @@ export const Container = styled.div`
     gap: 2rem;
 
     img {
-      width: 79px;
+      width: 179px;
       height: 80%;
       border-radius: 0.5rem;
       background-position: center;
@@ -24,7 +24,7 @@ export const Container = styled.div`
       width: 600px;
       max-width: 600px;
       height: 360px;
-      padding: 1rem;
+      // padding: 1rem;
       background: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_300};
       color: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_100};
       border: 2px solid ${({ theme }) => theme.COLORS.SWATCH.SWATCH_400};
