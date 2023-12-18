@@ -137,16 +137,19 @@ export function ProductItems({ searchValue }) {
                       <p className="price">Preço: R$ {product.price}</p>
                       <p className="estock">Estoque: {product.quantity}</p>
                     </div>
-                    <button onClick={() => handleEditProduct(product.id)}>Editar produto</button>
+                    
+                    <button className="editar" onClick={() => handleEditProduct(product.id)}>Editar produto</button>
+                    <div className="comprar">
                     <label className="checkbox-label">
                     <input
-                      className='che'
+                      className="checkbox"
                       type="checkbox"
                       checked={selectedProducts.includes(product.id)}
                       onChange={() => handleCheckboxChange(product.id)}
                     />
                     Comprar
                   </label>
+                  </div>
                   </div>
                 </div>
               ))

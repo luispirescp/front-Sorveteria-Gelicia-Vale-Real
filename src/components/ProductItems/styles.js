@@ -9,13 +9,12 @@ export const Container = styled.div`
     flex-wrap: wrap;
     gap: 2rem;
 
-    img {
+    .imagem {
+      position: relative;
+      margin-top:190px;
+      width: 120px;
+      height: 120px;
 
-      width: 180px;
-      height: 80%;
-      border-radius: 0.5rem;
-      background-position: center;
-      background-size: contain;
     }
     .price{
       color: #fff; /* Cor do texto */
@@ -36,10 +35,10 @@ export const Container = styled.div`
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
-      width: 600px;
+      width: 300px;
      
       height: 360px;
-      // padding: 1rem;
+      padding: 1rem;
       background: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_300};
       color: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_100};
       border: 2px solid ${({ theme }) => theme.COLORS.SWATCH.SWATCH_400};
@@ -54,6 +53,27 @@ export const Container = styled.div`
           display: flex;
           flex-direction: column;
         }
+
+        .editar {
+          width: 150px;
+          position: absolute;
+        
+          
+          padding: 10px 10px;
+          border: 2px solid transparent;
+          border-radius: 5px;
+          background-color: #007bff;
+          color: white;
+          text-align: center;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        
+        .editar:hover {
+          background-color: #0056b3;
+          border-color: #0056b3;
+        }
+
         .input-search {
           /* Adicione os estilos desejados para o input */
           padding: 8px;
@@ -61,16 +81,16 @@ export const Container = styled.div`
           border-radius: 4px;
           margin-right: 8px;
         }
-        .checkbox-label{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding:3px;
-          width: 100%;
-          height:15%;
-          background-color: #B0E0E6;
-          margin-start: 58px;
-        }
+        // .checkbox-label{
+        //   display: flex;
+        //   align-items: center;
+        //   justify-content: center;
+        //   padding:3px;
+        //   width: 100%;
+        //   height:15%;
+        //   background-color: #B0E0E6;
+        //   margin-start: 58px;
+        // }
 
         .productName {
           white-space: nowrap;
@@ -86,62 +106,105 @@ export const Container = styled.div`
           border: none;
           border-radius: 4px;
           cursor: pointer;
-        }
-
-        button {
-          background: transparent;
-          border: none;
-          width: 70%;
-          height:20%;
-          margin-top:10%;
-          border-radius: 0.5rem;
-          padding: 0.4rem;
-          background: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_200};
-          color: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_100};
-          font-size: 0.875rem;
-          font-weight: 500;
-          transition: all 0.4s ease-in-out;
-  
-          &:hover {
-            background: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_400};
-            color: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_200};
-          }
-        }
-        .estock {
-          color: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_100};
-          font-weight: 500;
-        }
-        .price {
-          color: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_100};
-          font-weight: 500;
-          font-size:25px;
-        }
+        } 
       }
     }
     @media (max-width: 568px) {
-            .card {
-                    
+            .card {                    
                     width: 600px;
                     max-width:600;
                     min-width:300px;
                     diplay flex;
-                    padding:10px;
+                    padding-left:1;
+                    padding-right:1;
+                    padding-top:7px;
+                    padding-bottom:15px;
+                    
                 
                       .name{      
+                        position:absolute;
                         padding:10px;
+                        width:250px;                        
                         color: #228B22	; /* Cor do texto */
                         -webkit-text-stroke: 1px #000; /* Largura e cor da borda para navegadores WebKit */
                         text-stroke: 1px #000; /* Largura e cor da borda para navegadores padrão */
                         background-color: transparent; /* Fundo transparente */
                       }     
-                   
-     
-                    
+                                      
                       }
-                      .imagem{                         
+                      
+                      .price{
+                        position:absolute;
+                        font-size:27px;
+                        
+                        position:absolute;
+                        margin-top:180px;
+                        color: #8B4513	; /* Cor do texto */
+                        -webkit-text-stroke: 1px #000; /* Largura e cor da borda para navegadores WebKit */
+                        text-stroke: 2px #8B4513; /* Largura e cor da borda para navegadores padrão */
+                        background-color: transparent; /* Fundo transparente */
+                      }
+                     
+                      .editar {
+                        width: 250px;
+                        position: absolute;
+                        margin-top: 290px;
+                        
+                        padding: 10px 10px;
+                        border: 2px solid transparent;
+                        border-radius: 5px;
+                        background-color: #007bff;
+                        color: white;
+                        text-align: center;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                      }
+                      
+                      .editar:hover {
+                        background-color: #0056b3;
+                        border-color: #0056b3;
+                      }
+                      .comprar{
+                        position: absolute;
+                        margin-top:90px;
+                        color: #8B4513;
+                        bold: true;
+                        font-weight: bold;
+                      }
+                    
+                      .checkbox-label{                       
+                        position: absolute;
+                        padding: 8px; 
+                        width: 28%;
+                        height: 5%;
+                        position:absolute;
+                        margin-top:125px;
+                        margin-left:1px;
+                      }
+                      .checkbox{
+                        width:20px;
+                        padding:20px;
+                        color: #0056b3;
+                        
+                      }
+
+                      .estock{
+                        color: #D2691E	;
+                        -webkit-text-stroke: 1px #000; /* Largura e cor da borda para navegadores WebKit */
+                        text-stroke: 1px #000; /* Largura e cor da borda para navegadores padrão */
+                        background-color: transparent; /* Fundo transparente */
+                        position: absolute;
+                        margin-left:180px;
+                        margin-top:300px;
+                      }
+
+                      .imagem{  
+                      position:relative;    
                       width:100px;  
                       height:100px;       
-                      margin-top:156px
+                      margin-top:70px;
+                      transition: transform 0.3s ease;
+                      
                       }
               }
 
