@@ -39,8 +39,8 @@ export const FormContainer = styled.div`
       position: absolute;
       top: 294px;
       left: 255px;
-      width:100px;
-      height:100px;      
+      width:90px;
+      height:90px;      
     }
 
     #barcode{
@@ -64,7 +64,7 @@ export const FormContainer = styled.div`
     #description{
 display:flex;
       flex-wrap: nowrap | wrap | wrap-reverse;
-      width: 240px;
+      width: 210px;
      
     }
     #quantity{
