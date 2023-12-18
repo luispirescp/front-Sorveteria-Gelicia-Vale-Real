@@ -6,7 +6,7 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   } 
-  
+     
   body {
     background: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_200};
     color: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_100};
