@@ -20,6 +20,26 @@ export const FormContainer = styled.div`
     padding:10px;
   }
 
+  /* Estilos para dispositivos móveis */
+  @media (max-width: 467px) { 
+    margin: -1px;
+    padding:3px;
+    margin-bottom:5px;
+    
+   
+  }
+    .imagem {
+      display: flex;
+      align-items: center;
+      gap: 60px; /* Espaçamento entre o input e a imagem */
+    }
+  
+    .imagem img {
+      max-width: 100px; 
+      padding:10px;
+    }
+  }
+
   `;
 
   export const StyledLink = styled(Link)`

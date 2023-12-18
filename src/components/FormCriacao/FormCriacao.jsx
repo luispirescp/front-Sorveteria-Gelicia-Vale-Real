@@ -66,13 +66,13 @@ const CreateProductForm = () => {
           <Form>
             <FormGroup>
               <label htmlFor="name">Nome:</label>
-              <Field type="text" id="name" name="name" as={InputField} />
+              <Field type="text" placeholder="digite o nome do produto" id="name" name="name" as={InputField}/>
               <ErrorMessage name="name" component="div" />
             </FormGroup>
 
             <FormGroup>
               <label htmlFor="barcode">Código de Barras:</label>
-              <Field type="text" id="barcode" name="barcode" as={InputFieldCodBarra} />
+              <Field type="text" id="barcode" placeholder="insira o código de barras" name="barcode" as={InputFieldCodBarra} />
               <ErrorMessage name="barcode" component="div" />
             </FormGroup>
 
@@ -82,6 +82,7 @@ const CreateProductForm = () => {
                 as={TextAreaField} // Defina o tipo de campo a ser renderizado
                 id="description"
                 name="description"
+                placeholder="Descreva sobre"
                 rows={4}
                 cols={50}
               />
@@ -94,6 +95,7 @@ const CreateProductForm = () => {
                 type="text"
                 id="image"
                 name="image"
+                placeholder="cole a url da imagem"
                 as={InputField}
                 onChange={(e) => setImageUrl(e.target.value)}
                 value={imageUrl}
@@ -110,7 +112,12 @@ const CreateProductForm = () => {
 
             <FormGroup>
               <label htmlFor="price">Preço:</label>
-              <Field type="number" id="price" name="price" as={InputField} />
+              <Field 
+              type="number" 
+              id="price" 
+              name="price" 
+              placeholder="ex:4.45"
+              as={InputField} />
               <ErrorMessage name="price" component="div" />
             </FormGroup>
 
@@ -120,9 +127,9 @@ const CreateProductForm = () => {
               <ErrorMessage name="quantity" component="div" />
             </FormGroup>
 
-            <SubmitButton type="submit">Salvar</SubmitButton>
+            <SubmitButton id="salvar" type="submit">Salvar</SubmitButton>
             <Link to="/products">
-              <ButtonVoltar>Voltar</ButtonVoltar>
+              <ButtonVoltar id="voltar" >Voltar</ButtonVoltar>
             </Link>
           </Form>
         )}

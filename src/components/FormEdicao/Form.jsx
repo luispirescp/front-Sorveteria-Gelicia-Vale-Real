@@ -117,7 +117,7 @@ const EditProduct = () => {
               <ErrorMessage name="quantity" component="div" />
             </FormGroup>
 
-            <SubmitButton type="submit">Salvar</SubmitButton>
+            <SubmitButton id="salvar" type="submit">Salvar</SubmitButton>
             <StyledLink to="/products">Voltar</StyledLink>
           </Form>
         )}
