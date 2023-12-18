@@ -50,8 +50,10 @@ export const FormContainer = styled.div`
       margin-left:10px;
     }
 #price{
-  margin:10px;
-  margin-left:70px;
+  display:flex;
+      flex-wrap: nowrap | wrap | wrap-reverse;
+  margin:1px;
+  margin-left:0px;
   width:100px;
   #price.label{
     position: relative;
@@ -68,14 +70,18 @@ display:flex;
      
     }
     #quantity{
-      margin:10px;
-      margin-left:20px;
+      display:flex;
+      flex-wrap: nowrap | wrap | wrap-reverse;
+  margin:1px;
+  margin-left:10px;
+      margin:1px;
+      margin-left:5px;      
       width:100px;
     }
     #salvar{
       position: relative;
       left: 10%; /* Define o ponto de referência para o centro */
-      
+      margin-top:20px;
       margin-right:30px;
     }
 
