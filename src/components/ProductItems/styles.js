@@ -10,19 +10,34 @@ export const Container = styled.div`
     gap: 2rem;
 
     img {
-      width: 179px;
+
+      width: 180px;
       height: 80%;
       border-radius: 0.5rem;
       background-position: center;
       background-size: contain;
     }
+    .price{
+      color: #fff; /* Cor do texto */
+      -webkit-text-stroke: 1px #000; /* Largura e cor da borda para navegadores WebKit */
+      text-stroke: 1px #000; /* Largura e cor da borda para navegadores padrão */
+      background-color: transparent; /* Fundo transparente */
+    }
 
+    .name{      
+      padding:10px;
+      color: #fff; /* Cor do texto */
+      -webkit-text-stroke: 1px #000; /* Largura e cor da borda para navegadores WebKit */
+      text-stroke: 1px #000; /* Largura e cor da borda para navegadores padrão */
+      background-color: transparent; /* Fundo transparente */
+    }
+   
     .card {
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
       width: 600px;
-      max-width: 600px;
+     
       height: 360px;
       // padding: 1rem;
       background: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_300};
@@ -103,6 +118,35 @@ export const Container = styled.div`
         }
       }
     }
+    @media (max-width: 568px) {
+            .card {
+                    position: relative;
+                    width: 600px;
+                    max-width:600;
+                    min-width:300px;
+                    diplay flex;
+                    padding:10px;
+                
+                      .name{      
+                        padding:10px;
+                        color: #228B22	; /* Cor do texto */
+                        -webkit-text-stroke: 1px #000; /* Largura e cor da borda para navegadores WebKit */
+                        text-stroke: 1px #000; /* Largura e cor da borda para navegadores padrão */
+                        background-color: transparent; /* Fundo transparente */
+                      }     
+                   
+     
+                    
+                      }
+                      .imagem{  
+                      position:relative;    
+                      width:100px;  
+                      height:100px;       
+                      margin-top:156px
+                      }
+              }
+
+ 
   }
   return (
     <Container className="input">
@@ -112,15 +156,5 @@ export const Container = styled.div`
   );
 }
 
-  @media screen and (min-width: 450px) {    
-    .cards .card {
-      max-width: 540px;
-    }
-  }
-
-  @media screen and (min-width: 1440px) {
-    .card {
-      max-width: 520px;
-    }
-  }
+  
 `;

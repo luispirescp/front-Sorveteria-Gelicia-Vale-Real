@@ -94,14 +94,12 @@ export function ProductItems({ searchValue }) {
 
   return (
     <>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <input
-          style={{
-            padding: '8px',
-            border: '1px solid #ccc',
-            borderRadius: '4px',
-            marginRight: '8px',
-          }}
+      <div >
+        <input 
+        className='input-pesquisa'
+          // style={{
+          //  
+          // }}
           placeholder="Pesquisar produtos"
           onChange={handleSearch}
         />
@@ -132,10 +130,10 @@ export function ProductItems({ searchValue }) {
               products.map(product => (
                 <div className="card" key={product.id}>
                  
-                  <img src={product.image} alt="Product" />
+                  <img className="imagem" src={product.image} alt="Product" />
                   <div className="details">
                     <div>
-                      <h2>{product.name}</h2>                      
+                      <h2 className="name">{product.name}</h2>                      
                       <p className="price">Preço: R$ {product.price}</p>
                       <p className="estock">Estoque: {product.quantity}</p>
                     </div>
