@@ -120,7 +120,7 @@ export const Container = styled.div`
     }
     @media (max-width: 568px) {
             .card {
-                    position: relative;
+                    
                     width: 600px;
                     max-width:600;
                     min-width:300px;
@@ -138,8 +138,7 @@ export const Container = styled.div`
      
                     
                       }
-                      .imagem{  
-                      position:relative;    
+                      .imagem{                         
                       width:100px;  
                       height:100px;       
                       margin-top:156px
