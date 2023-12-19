@@ -3,47 +3,85 @@ import styled from 'styled-components';
 
 export const FormContainer = styled.div`
  
-  max-width: 900px;
-  margin: 0 auto;
-  margin-top:60px;
-  padding: 10px;  
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  .imagem {
-    display: flex;
-    align-items: center;
-    gap: 60px; /* Espaçamento entre o input e a imagem */
-  }
 
-  .imagem img {
-    max-width: 100px; 
-    padding:10px;
-  }
 
-  /* Estilos para dispositivos móveis */
-  @media (max-width: 467px) { 
-    margin: -1px;
-    padding:3px;
-    margin-bottom:5px;
-    
-   
-  }
-    .imagem {
-      display: flex;
-      align-items: center;
-      gap: 60px; /* Espaçamento entre o input e a imagem */
-    }
-  
-    .imagem img {
-      max-width: 100px; 
-      padding:10px;
-    }
-  }
+/* Estilos para dispositivos móveis */
+@media (max-width: 467px) { 
 
-  `;
+              margin-top:40px;
+              margin-left:5px;
+              padding:3px;
+              margin-bottom:15px;
 
-  export const StyledLink = styled(Link)`
-padding: 10px 20px 10px;
+              #name{
+              display:flex;
+              flex-wrap: nowrap | wrap | wrap-reverse;
+              width:290px;
+              margin-left:10px;
+              }
+
+              #image{
+              display:flex;
+              flex-wrap: nowrap | wrap | wrap-reverse;
+              margin-left:10px;
+              width:290px;
+              }
+              h2{
+              position: relative;
+              top: 2px;
+              margin-bottom:19px;
+              left: 45px;
+              }
+
+              img{
+              position: absolute;
+              top: 183px;
+              left: 255px;
+              width:90px;
+              height:90px;      
+              }
+
+              #barcode{
+              display:flex;
+              flex-wrap: nowrap | wrap | wrap-reverse;
+              width:200px;
+              margin-left:10px;
+              }
+              #price{
+              display:flex;
+              flex-wrap: nowrap | wrap | wrap-reverse;
+              margin:1px;
+              margin-left:0px;
+              width:100px;
+              #price.label{
+              position: relative;
+              left: 10%; /* Define o ponto de referência para o centro */
+
+              margin-right:30px;
+              }
+              }
+
+              #description{
+              display:flex;
+              flex-wrap: nowrap | wrap | wrap-reverse;
+              width: 210px;
+              border-radius:15px solid; 
+
+              }
+              #quantity{
+              display:flex;
+              flex-wrap: nowrap | wrap | wrap-reverse;
+              margin:1px;
+              margin-left:10px;
+              margin:1px;
+              margin-left:5px;  
+              border-radius:15px solid; 
+                 
+              width:100px;
+              }
+
+              #salvar{
+                padding: 10px 20px 10px;
 font-size: 16px;
 background-color: #007bff;
 color: #fff;
@@ -54,57 +92,43 @@ cursor: pointer;
 &:hover {
   background-color: #0056b3;
 }
+              position: relative;
+              left: 10%; /* Define o ponto de referência para o centro */
+              margin-top:20px;
+              margin-right:130px;
+              }
+
+              #voltar{
+              position: relative;
+              left: 30%; /* Define o ponto de referência para o centro */      
+              margin-right:10px;
+              }
+`;
+
+
+export const StyledLink = styled(Link)`
+
 `;
 
 export const FormGroup = styled.div`
-  margin-bottom: 25px;
+
 `;
 
 export const CustomInputField = styled.input`
-  width: 400px;
-  padding: -2px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-`;
 
+`;
 export const InputField = styled.input`
-  width: 100%;
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 14px;
+
 `;
 
 export const FieldImg = styled.input`
-  width: 100%;
-  padding: 18px;
-  margin-top:10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 14px;
+
 `;
 
 export const TextAreaField = styled.textarea`
-  width: 100%;
-  padding: 2px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  resize: vertical; /* Permite redimensionamento vertical */
+
 `;
 
 export const SubmitButton = styled.button`
-  padding: 10px 15px;
-  font-size: 16px;
-  margin-right: 181px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
 
-  &:hover {
-    background-color: #0056b3;
-  }
 `;

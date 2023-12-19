@@ -20,11 +20,11 @@ export const Content = styled.main`
     display: none;
   }
 
+  @media screen and (max-width: 850px) {
+ 
+  }
+
   @media screen and (min-width: 450px) {
-    padding: 2rem 3rem;
-    
-    .input {
-      display: block;
-    }
+ 
   }
 `;

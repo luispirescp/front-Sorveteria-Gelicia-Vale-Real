@@ -65,7 +65,7 @@ const EditProduct = () => {
 
   return (
     <FormContainer>
-      <h2>Editar Produto {id}</h2>
+      <h2 className="titulo">Editar Produto {id}</h2>
       <Formik
         enableReinitialize
         initialValues={product}
@@ -76,13 +76,13 @@ const EditProduct = () => {
           <Form>
             <FormGroup>
               <label htmlFor="name">Nome:</label>
-              <Field type="text" id="name" name="name" as={InputField} />
+              <InputField type="text" id="name" name="name" placeholder="digite o nome do produto" as={InputField} />
               <ErrorMessage name="name" component="div" />
             </FormGroup>
 
             <FormGroup>
               <label htmlFor="description">Descrição:</label>
-              <Field as="textarea" id="description" name="description" rows={4} cols={50} as={TextAreaField} />
+              <InputField as="textarea" id="description" name="description" placeholder="digite a descrição do produto" rows={4} cols={50} as={TextAreaField} />
               <ErrorMessage name="description" component="div" />
             </FormGroup>
 
@@ -91,6 +91,7 @@ const EditProduct = () => {
               <FieldImg
                 type="text"
                 id="image"
+                placeholder="cole a url da imagem"
                 name="image"
                 as={InputField}
                 onChange={(e) => setFieldValue('image', e.target.value)}
