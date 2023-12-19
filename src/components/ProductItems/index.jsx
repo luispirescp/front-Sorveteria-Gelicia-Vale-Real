@@ -94,37 +94,22 @@ export function ProductItems({ searchValue }) {
 
   return (
     <>
-      <div className="input_pesquisa" >
-        <input 
-       
-          // style={{
-          //  
-          // }}
+      
+        <input className="input-pesquisa"       
           placeholder="Pesquisar produtos"
           onChange={handleSearch}
         />
-        <button
-          style={{
-            padding: '8px 16px',
-            backgroundColor: '#007bff',
-            color: 'white',
-            border: 'none',
-            borderRadius: '4px',
-            cursor: 'pointer',
-          }}
-          onClick={handleSearch}
-        >
-          Pesquisar
-        </button>
-      </div>
+        <button className="btn-pesquisar" onClick={handleSearch}> Pesquisar </button>
+      
       <div className='total-compras'>
         <button className="button-comprar" onClick={handleBuyProducts}>
-          Comprar Produtos Selecionados
+          <p>Comprar Produtos </p>
+          <p>Selecionados</p>
         </button>
         <p className='total'>Total: R$ {totalPrice.toFixed(2)}</p>
       </div>
       <Container>
-        <Section title="Produtos">
+        <Section >
           <div className="cards">
             {
               products.map(product => (

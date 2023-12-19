@@ -2,64 +2,140 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 100%;
+  
+
+  .total {
+    position: absolute;
+    margin-top:20px;
+    width: 10px;
+    font-size:18px;
+  }
 
   .cards {
     display: flex;
     align-items: start;
     flex-wrap: wrap;
-    gap: 2rem;
+    margin-right:20px;
+    gap: 1rem;
 
-    .imagem {
-      position: relative;
-      margin-top:190px;
-      width: 120px;
-      height: 120px;
-
-    }
-    .price{
-     
-      color: #fff; /* Cor do texto */
-      -webkit-text-stroke: 1px #000; /* Largura e cor da borda para navegadores WebKit */
-      text-stroke: 1px #000; /* Largura e cor da borda para navegadores padrão */
-      background-color: transparent; /* Fundo transparente */
+    .btn-pesquisar {
+      position: absolute;
+      margin-top:120px;
+      width: 10px;
+      margin-left:40px;
+      font-size:18px;
     }
 
-    .name{      
-      padding:10px;
-      color: #fff; /* Cor do texto */
-      -webkit-text-stroke: 1px #000; /* Largura e cor da borda para navegadores WebKit */
-      text-stroke: 1px #000; /* Largura e cor da borda para navegadores padrão */
-      background-color: transparent; /* Fundo transparente */
+    .input-pesquisa{
+      position:relative;
+      margin-top:200px;
+      margin-left:50px;
     }
-   
+    
+    
     .card {
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
       width: 300px;
-     
-      height: 360px;
-      padding: 1rem;
+      max-width:300px;
+      min-width:300px;
+      height: 380px;
+      padding:5px;
       background: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_300};
       color: ${({ theme }) => theme.COLORS.SWATCH.SWATCH_100};
       border: 2px solid ${({ theme }) => theme.COLORS.SWATCH.SWATCH_400};
       border-radius: 0.5rem;
   
+
+      .total {
+        position: absolute;
+        margin-top:20px;
+        width: 10px;
+        font-size:18px;
+      }
+
       .details {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-  
-        // div {
-        //   display: flex;
-        //   flex-direction: column;
-        // }
+      }
+
+      .name{      
+        position:absolute;
+        padding:10px;
+        width:250px;                        
+        color: #228B22	; /* Cor do texto */
+        -webkit-text-stroke: 1px #000; /* Largura e cor da borda para navegadores WebKit */
+        text-stroke: 1px #000; /* Largura e cor da borda para navegadores padrão */
+        background-color: transparent; /* Fundo transparente */
+      } 
+
+      .imagem{  
+        position:relative;    
+        width:150px;  
+        height:150px;       
+        margin-top:86px;
+        margin-right:50px;
+        border-radius:8px;
+        transition: transform 0.3s ease;
+        box-shadow: 20px 14px 18px rgba(1, 0, 0, 0.4); /* Adiciona uma sombra suave */
+
+        
+        }
+
+        .price{
+          display: flex;
+          flex-direction: column;
+          font-size:27px;
+          margin-left: 2px;
+          position:absolute;
+          margin-top:243px;
+          color: #8B4513	; /* Cor do texto */
+          -webkit-text-stroke: 1px #000; /* Largura e cor da borda para navegadores WebKit */
+          text-stroke: 2px #8B4513; /* Largura e cor da borda para navegadores padrão */
+          background-color: transparent; /* Fundo transparente */
+        }
+
+        .comprar{
+          position: absolute;
+          margin-top:60px;
+          color: #8B4513;
+          bold: true;
+          font-weight: bold;
+        }
+      
+        .checkbox-label{                       
+          position: absolute;
+          padding: 2px; 
+          // width: 28%;
+          // height: 5%;
+          position:absolute;
+          margin-top:225px;                        
+          margin-left:170px;
+        }
+        .checkbox{
+          position: absolute;
+          width:20px;          
+          color: #0056b3;
+          margin-top:5px;                        
+          margin-left:75px;
+          
+        }
+
+        .estock{
+          color: #D2691E	;
+          -webkit-text-stroke: 1px #000; /* Largura e cor da borda para navegadores WebKit */
+          text-stroke: 1px #000; /* Largura e cor da borda para navegadores padrão */
+          background-color: transparent; /* Fundo transparente */
+          position: absolute;
+          margin-left:190px;
+          margin-top:310px;
+        }
 
         .editar {
           width: 150px;
-          position: absolute;
-        
-          
+          position: absolute;                
           padding: 10px 10px;
           border: 2px solid transparent;
           border-radius: 5px;
@@ -68,6 +144,8 @@ export const Container = styled.div`
           text-align: center;
           cursor: pointer;
           transition: all 0.3s ease;
+          margin-top: 290px;
+          margin-bottom:10px;          
         }
         
         .editar:hover {
@@ -88,17 +166,11 @@ export const Container = styled.div`
       }
     }
     @media (max-width: 568px) {
-            .card {                    
-                    width: 600px;
-                    max-width:600;
-                    min-width:300px;
-                    diplay flex;
-                    padding-left:1;
-                    padding-right:1;
+            .card {                   
+                    diplay flex;                   
                     padding-top:7px;
                     padding-bottom:15px;
-                    
-                
+
                       .name{      
                         position:absolute;
                         padding:10px;
@@ -109,13 +181,13 @@ export const Container = styled.div`
                         background-color: transparent; /* Fundo transparente */
                       }     
                                       
-                      }
+                      
                       
                       .price{
                         display: flex;
                         flex-direction: column;
                         font-size:27px;
-                        
+                        margin-left: 2px;
                         position:absolute;
                         margin-top:243px;
                         color: #8B4513	; /* Cor do texto */
@@ -160,6 +232,7 @@ export const Container = styled.div`
                         margin-top:155px;                        
                         margin-left:180px;
                       }
+
                       .checkbox{
                         width:20px;
                         padding:20px;
