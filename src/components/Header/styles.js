@@ -5,6 +5,9 @@ export const Container = styled.header`
   gap: 1rem;
   align-items: center;
   padding: 1rem;
+  position: absolute;
+  z-index: 1; 
+  
 
   .menu {
     background: none;
@@ -21,7 +24,7 @@ export const Container = styled.header`
     }
   }
   
-  .navbar {
+  .navbar {    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -147,5 +150,6 @@ export const Container = styled.header`
   @media screen and (min-width: 850px) {
     display: none;
     padding: 2rem 1rem;
+    position: absolute;
   }
 `;

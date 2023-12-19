@@ -94,9 +94,9 @@ export function ProductItems({ searchValue }) {
 
   return (
     <>
-      <div >
+      <div className="input_pesquisa" >
         <input 
-        className='input-pesquisa'
+       
           // style={{
           //  
           // }}
@@ -134,7 +134,7 @@ export function ProductItems({ searchValue }) {
                   <div className="details">
                     <div>
                       <h2 className="name">{product.name}</h2>                      
-                      <p className="price">Preço: R$ {product.price}</p>
+                      <p className="price">R$: {product.price ? product.price.toFixed(2) : '0.00'}</p>
                       <p className="estock">Estoque: {product.quantity}</p>
                     </div>
                     

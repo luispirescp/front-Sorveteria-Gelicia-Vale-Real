@@ -17,6 +17,7 @@ export const Container = styled.div`
 
     }
     .price{
+     
       color: #fff; /* Cor do texto */
       -webkit-text-stroke: 1px #000; /* Largura e cor da borda para navegadores WebKit */
       text-stroke: 1px #000; /* Largura e cor da borda para navegadores padrão */
@@ -49,10 +50,10 @@ export const Container = styled.div`
         flex-direction: column;
         justify-content: space-between;
   
-        div {
-          display: flex;
-          flex-direction: column;
-        }
+        // div {
+        //   display: flex;
+        //   flex-direction: column;
+        // }
 
         .editar {
           width: 150px;
@@ -74,23 +75,8 @@ export const Container = styled.div`
           border-color: #0056b3;
         }
 
-        .input-search {
-          /* Adicione os estilos desejados para o input */
-          padding: 8px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          margin-right: 8px;
-        }
-        // .checkbox-label{
-        //   display: flex;
-        //   align-items: center;
-        //   justify-content: center;
-        //   padding:3px;
-        //   width: 100%;
-        //   height:15%;
-        //   background-color: #B0E0E6;
-        //   margin-start: 58px;
-        // }
+      
+   
 
         .productName {
           white-space: nowrap;
@@ -98,15 +84,7 @@ export const Container = styled.div`
           text-overflow: ellipsis; /* Isso irá adicionar reticências (...) caso o texto ultrapasse o contêiner */
           /* Outros estilos, se necessário */
         }
-        .button-search {
-          /* Adicione os estilos desejados para o botão */
-          padding: 8px 16px;
-          background-color: #007bff;
-          color: white;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-        } 
+      
       }
     }
     @media (max-width: 568px) {
@@ -134,11 +112,12 @@ export const Container = styled.div`
                       }
                       
                       .price{
-                        position:absolute;
+                        display: flex;
+                        flex-direction: column;
                         font-size:27px;
                         
                         position:absolute;
-                        margin-top:180px;
+                        margin-top:243px;
                         color: #8B4513	; /* Cor do texto */
                         -webkit-text-stroke: 1px #000; /* Largura e cor da borda para navegadores WebKit */
                         text-stroke: 2px #8B4513; /* Largura e cor da borda para navegadores padrão */
@@ -174,17 +153,18 @@ export const Container = styled.div`
                     
                       .checkbox-label{                       
                         position: absolute;
-                        padding: 8px; 
+                        padding: 2px; 
                         width: 28%;
                         height: 5%;
                         position:absolute;
-                        margin-top:125px;
-                        margin-left:1px;
+                        margin-top:155px;                        
+                        margin-left:180px;
                       }
                       .checkbox{
                         width:20px;
                         padding:20px;
                         color: #0056b3;
+                        margin-left:10px;
                         
                       }
 
@@ -200,11 +180,21 @@ export const Container = styled.div`
 
                       .imagem{  
                       position:relative;    
-                      width:100px;  
-                      height:100px;       
-                      margin-top:70px;
+                      width:150px;  
+                      height:150px;       
+                      margin-top:86px;
+                      margin-right:50px;
+                      border-radius:8px;
                       transition: transform 0.3s ease;
+                      box-shadow: 20px 14px 18px rgba(1, 0, 0, 0.4); /* Adiciona uma sombra suave */
+  
                       
+                      }
+
+                      .input-pesquisa{
+                        position:relative;
+                        margin-top:200px;
+                        margin-left:50px;
                       }
               }
 
