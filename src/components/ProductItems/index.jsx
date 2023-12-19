@@ -118,7 +118,9 @@ export function ProductItems({ searchValue }) {
                   <img className="imagem" src={product.image} alt="Product" />
                   <div className="details">
                     <div>
-                      <h2 className="name">{product.name}</h2>                      
+
+
+                    <h2 className="name">{product.name.charAt(0).toUpperCase() + product.name.slice(1)}</h2>                  
                       <p className="price">R$: {product.price ? product.price.toFixed(2) : '0.00'}</p>
                       <p className="estock">Estoque: {product.quantity}</p>
                     </div>
